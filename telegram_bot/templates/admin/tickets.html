@@ -34,12 +34,10 @@
                     <th>
                         <a href="{{ url_for('admin.tickets', page=page, sort_by='date_added', order='asc' if order == 'desc' else 'desc', start_date=start_date, end_date=end_date) }}" class="text-decoration-none d-flex align-items-center">
                             Date Added
-                            {% if sort_by == 'date_added' %}
-                                {% if order == 'asc' %}
-                                    <i class="bi bi-arrow-up ms-2"></i>  <!-- Ascending arrow -->
-                                {% else %}
-                                    <i class="bi bi-arrow-down ms-2"></i>  <!-- Descending arrow -->
-                                {% endif %}
+                            {% if order == 'asc' %}
+                                <i class="bi bi-arrow-up ms-2"></i>  <!-- Ascending arrow -->
+                            {% else %}
+                                <i class="bi bi-arrow-down ms-2"></i>  <!-- Descending arrow -->
                             {% endif %}
                         </a>
                     </th>

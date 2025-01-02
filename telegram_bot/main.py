@@ -1,4 +1,3 @@
-
 from flask import Flask, request,  render_template, redirect, url_for, flash
 import telebot
 from telebot.apihelper import ApiException
@@ -32,7 +31,6 @@ WEBHOOK_URL_PATH = "/webhook"
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
-
 
 
 @app.template_filter('date')
